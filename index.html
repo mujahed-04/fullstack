@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>MyStore</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+        </div>
+        <div class="cart">
+            <button id="cartButton">Cart (0)</button>
+        </div>
+    </header>
+
+    <!-- Filters Section -->
+    <section id="filters">
+        <h2>Filters</h2>
+        <form id="filterForm">
+            <div class="filter-category">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="all">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+
+            <div class="filter-price">
+                <label for="price">Price Range</label>
+                <input type="range" id="price" min="0" max="1000" step="50" value="500">
+                <span id="price-value">500</span>
+            </div>
+
+            <div class="filter-rating">
+                <label for="rating">Rating</label>
+                <select id="rating">
+                    <option value="all">All Ratings</option>
+                    <option value="1">1 Star & Above</option>
+                    <option value="2">2 Stars & Above</option>
+                    <option value="3">3 Stars & Above</option>
+                    <option value="4">4 Stars & Above</option>
+                    <option value="5">5 Stars Only</option>
+                </select>
+            </div>
+        </form>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="product-list">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Cart Modal (Hidden by Default) -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h3>Your Cart</h3>
+            <div id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <button id="closeCartButton">Close Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
